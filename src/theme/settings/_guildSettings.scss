@@ -25,6 +25,17 @@
   }
 }
 
+// STICKERS
+#{c(guildSettings stickers wrapper)} {
+  &,
+  &:hover {
+    background: transparent;
+  }
+}
+#{c(guildSettings stickers action)} {
+  background: cv('shading.popout');
+}
+
 // MEMBERS
 #{c(guildSettings members maintableContainer)} {
   background: cv('shading.card');
@@ -82,6 +93,20 @@
   &#{c(guildSettings access joinOptionActive)} {
     background: cv('shading.cardInner');
   }
+}
+
+// SAFETY SETUP
+#{c(main visualRefresh)} {
+  #{c(guildSettings safety changelog)},
+  #{c(guildSettings safety checklist)},
+  #{c(guildSettings safety itemWrapper)} {
+    background: cv('shading.card');
+    border: none;
+  }
+}
+#{c(guildSettings safety pill)} {
+  background: cv('shading.card');
+  border: 1px solid cv('color.main');
 }
 
 // AUDIT LOG
@@ -183,6 +208,18 @@
   background: cv('color.main');
   &:hover {
     background: cv('color.hover');
+  }
+}
+
+// SERVER BOOST
+#{c(main visualRefresh)} {
+  #{c(guildSettings boost tierCard)} {
+    border: none;
+  }
+  #{c(guildSettings boost tierHeader)},
+  #{c(guildSettings boost tierBody)} {
+    background: cv('shading.card');
+    border: none;
   }
 }
 
