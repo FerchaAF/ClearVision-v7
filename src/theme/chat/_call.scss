@@ -1,17 +1,15 @@
 @use 'backend' as *;
 
-#{c(main visualRefresh)} {
-  #{c(call wrapper)},
-  #{c(call channelChatWrapper)} {
-    background: transparent;
-  }
-  #{c(call container)} {
-    background: hsl(from cv('shading.bg') h s l/calc(cv('shading.percent') * 0.4));
-    border: none;
-  }
-  #{c(call root)} {
-    background: transparent;
-  }
+#{c(call wrapper)},
+#{c(call channelChatWrapper)} {
+  background: transparent;
+}
+#{c(call container)} {
+  background: hsl(from cv('shading.bg') h s l/calc(cv('shading.percent') * 0.4));
+  border: none;
+}
+#{c(call root)} {
+  background: transparent;
 }
 
 // EMPTY CALL
@@ -24,13 +22,15 @@
   animation: none;
 }
 
+#{c(call pulseGradient)} {
+  display: none;
+}
+
 // BUTTONS
 #{c(call buttonSection)} {
-  &#{c(call buttonSectionExperiment)} {
-    background: cv('shading.popout');
-    border: none;
-    border-radius: 4px;
-  }
+  background: cv('shading.popout');
+  border: none;
+  border-radius: 4px;
 }
 #{c(call colorable)} {
   &#{c(call disconnect)} {
@@ -48,11 +48,10 @@
 // DM CALL BG
 #{c(call wrapper)} {
   &#{c(call minimum)} {
-    #{c(call container)} {
-      background: hsl(from cv('shading.bg') h s l/calc(cv('shading.percent') * 0.6));
-    }
+    background: hsl(from cv('shading.bg') h s l/calc(cv('shading.percent') * 0.6));
   }
 }
+
 // REGION SELECTOR
 #{c(call quickSelectPopout)} {
   background: cv('shading.popout')
