@@ -14,7 +14,7 @@
 
 // SWITCH
 .vc-switch-container {
-  background: hsl(from var(--interactive-normal) h s l/.2) !important;
+  background: hsl(from var(--interactive-text-default) h s l/.2) !important;
   &.vc-switch-checked {
     background: cv('color.main') !important;
     path {
@@ -24,6 +24,16 @@
 }
 
 // SETTINGS CARDS
+.vc-card-base {
+  background: cv('shading.card');
+  border: 1px solid transparent;
+}
+.vc-plugin-ui-elements-button {
+  &:hover {
+    background: cv('shading.card');
+    border: 1px solid cv('color.main');
+  }
+}
 #{c(vencord quickActions pill)} {
   background: cv('shading.card');
   border: 1px solid transparent;

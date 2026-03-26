@@ -11,7 +11,7 @@
 // HEADER
 #{c(sidebar private headerContainer)} {
   &,
-  &:not(#{c(sidebar private tall)}):hover {
+  &:hover {
     color: cv('color.main');
   }
 }
@@ -36,7 +36,6 @@
     margin-left: 5px;
   }
 }
-#{c(sidebar private startActivityIcon)},
 #{c(sidebar private inviteButtonIcon)} {
   color: cv('color.main');
   &:hover {
@@ -72,16 +71,16 @@
   // SELECTED
   &#{c(sidebar private selected)} {
     background-color: transparent;
-    color: var(--interactive-active);
+    color: var(--interactive-text-active);
     &::before {
       right: 0;
       background: cv('color.main');
       animation: cv-channel-select 0.3s ease-in-out;
     }
     #{c(sidebar private activityText)} {
-      color: var(--interactive-active);
+      color: var(--interactive-text-active);
       strong {
-        color: var(--interactive-active);
+        color: var(--interactive-text-active);
       }
     }
   }

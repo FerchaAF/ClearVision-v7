@@ -1,6 +1,6 @@
 @use 'backend' as *;
 
-#{c(popouts threads browser)} {
+#{c(popouts threads popoutBrowser)} {
   background-color: cv('shading.popout');
   box-shadow: none;
 }
@@ -21,10 +21,17 @@
 // EMPTY
 #{c(popouts threads emptyIcon)} {
   background: cv('color.main');
-  color: var(--header-primary);
+  color: var(--interactive-icon-active);
 }
 
 // HOVER CHANNEL POPOUT
 #{c(popouts threads channelPopout)} {
   background-color: cv('shading.popout');
+}
+
+
+// MODAL
+#{c(popouts threads modalBrowser)} {
+  background-color: cv('shading.modal');
+  box-shadow: none;
 }

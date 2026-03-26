@@ -8,7 +8,6 @@
     }
   }
 }
-
 #{c(popouts dropdown popout)} {
   &,
   &#{c(popouts dropdown positionTop)} {
@@ -19,9 +18,6 @@
 #{c(popouts dropdown option)} {
   border-radius: 8px;
   margin: 0 8px;
-  &:hover {
-    background: cv('color.hover');
-  }
   &[aria-selected='true'] {
     background: cv('color.main');
     &:not(#{c(popouts dropdown option)}#{c(popouts dropdown multi)}) {
@@ -32,27 +28,29 @@
 
 // SINGLE SELECT
 #{c(popouts dropdown selectedIcon)} {
-  color: var(--interactive-active);
+  color: cv('icon.strong');
   circle {
     fill: cv('color.main');
   }
 }
 
-// MULTI SELECT
-#{c(popouts dropdown multiSelectCheckbox)} {
-  &#{c(popouts dropdown checked)} {
-    background: var(--interactive-active);
-    path {
-      fill: cv('color.main');
+
+
+#{c(popouts dropdown selectField)} {
+  &:not(#{c(popouts dropdown selectFieldInert)}) {
+    &:is(#{c(popouts dropdown selectFieldFocused)}, :focus-within) {
+      outline-color: cv('color.main');
     }
   }
 }
-#{c(popouts dropdown optionPillItem)} {
-  #{c(popouts dropdown optionPillBtn)} {
-    background: transparent;
-    border: none;
-    #{c(popouts dropdown optionPillBtn)} {
-      background: cv('color.main');
-    }
+#{c(popouts dropdown dropdown)} {
+  background-color: cv('shading.popout');
+}
+
+#{c(popouts dropdown listBoxItem)} {
+  #{c(popouts dropdown listBox)}:not(:focus-within) &[data-focus-visible=true],
+  #{c(main keyboardMode)} &:focus {
+    outline: none;
+    background: cv('color.main');
   }
 }

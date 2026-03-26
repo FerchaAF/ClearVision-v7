@@ -23,7 +23,7 @@
 }
 #{c(modals purchase gift shopIcon)} {
   background: cv('color.main');
-  color: var(--header-primary);
+  color: var(--interactive-icon-active);
 }
 #{c(modals purchase gift selectionBox)} {
   background: cv('shading.cardAlt');
@@ -59,11 +59,6 @@
 #{c(modals purchase boost content)},
 #{c(modals purchase boost upsellFooter)} {
   background: transparent;
-}
-:is(#{c(main themeLight)}, #{c(main themeDark)}) {
-  #{c(modals purchase boost quantityIconWrapper)} {
-    background: cv('shading.cardAlt');
-  }
 }
 #{c(modals purchase boost quantityValue)} {
   &,
